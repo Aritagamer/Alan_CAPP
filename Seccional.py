@@ -26,10 +26,10 @@ class seccional:
 
     if not Tables :
 
-      self.__Curs__.execute('CREATE TABLE Registro(Zona INTEGER ,Region Text ,Colonia Text, Sección INTEGER, 	  Nombre TEXT PRIMARY KEY, 	  Labora NUMERIC, Grupo_Whats NUMERIC, Num_Integrantes INTEGER	) ')
+      self.__Curs__.executescript('CREATE TABLE Registro(id INTEGER PRIMARY KEY AUTOINCREMENT, Zona INTEGER ,Region Text ,Colonia Text, Sección INTEGER, Nombre TEXT, 	  Labora NUMERIC, Grupo_Whats NUMERIC, Num_Integrantes INTEGER, Num_Registros INTEGER	) ')
       f = open(r'./SQL.txt','r+',encoding="utf-8")
       Tx = f.read()
-      self.__Curs__.execute(Tx)
+      self.__Curs__.executescript(Tx)
     
     print("Introduzca la seccion: ")
     self.Secc = input()
