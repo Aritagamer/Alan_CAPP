@@ -8,12 +8,27 @@ import Seccional as sec
 
 if __name__ == "__main__":
 
-	print("SISTEMA DE REGISTRO DE SECCIONALES\n\n")
+	decision = 1
 
-	print("Ingrese su nombre: ")
-	Nombre = input()
+	while decision == "1":
 
-	Secc = sec.seccional(Nombre)
+		os.system("cls")
 
-	Secc.disp_secc()
+		print("SISTEMA DE REGISTRO DE SECCIONALES\n\n")
+
+		print("Ingrese su nombre: ")
+		Nombre = input()
+
+		
+
+		Secc = sec.seccional(Nombre)
+
+		Secc.disp_secc()
+
+		print("Quiere seguir en el sistema?\n1 Si 0 No")
+		decision = input()
+
+	
+
+
 		
