@@ -1,1 +1,6 @@
 *.db
+Airam.db
+/dist
+/build
+/__pycache__
+/.vscode
